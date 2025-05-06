@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import './index.scss'
+
 import Homepage from './pages/Home.jsx';
 import AboutPage from './pages/About.jsx';
 import ApartmentPage from './pages/Apartment.jsx';
