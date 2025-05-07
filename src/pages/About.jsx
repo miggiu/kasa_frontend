@@ -1,10 +1,11 @@
-function AboutPage() {
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+export default function AboutPage() {
   return (
     <div>
-      <h1>About Us</h1>
-      <p>We are a company that values excellence and innovation.</p>
+      <Header />
+      <Footer />
     </div>
   );
 }
-
-export default AboutPage;

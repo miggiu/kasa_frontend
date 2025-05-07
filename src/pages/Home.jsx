@@ -1,11 +1,22 @@
 import Header from "../components/Header";
-import TitleCard from "../components/TitleCard";
+import Banner from "../components/Banner";
+import Cards from "../components/Cards";
+import Footer from "../components/Footer";
 
 function Homepage() {
   return (
     <div>
       <Header />
-      <TitleCard />
+      <Banner />
+      <section id="cards-container">
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      </section>
+      <Footer />
     </div>
   );
 }

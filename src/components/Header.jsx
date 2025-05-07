@@ -1,5 +1,5 @@
 import "./Header.scss";
-import kasaLogo from "../assets/logo.png";
+import kasaLogo from "/logo.png";
 
 export default function Header() {
   return (

@@ -1,10 +1,10 @@
-function ApartmentPage() {
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+export default function ApartmentPage() {
   return (
     <div>
-      <h1>Apartment</h1>
-      <p>This is the Apartment page.</p>
+      <Header />
+      <Footer />
     </div>
   );
 }
-
-export default ApartmentPage;
