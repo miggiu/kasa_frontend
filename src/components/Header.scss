@@ -1,0 +1,21 @@
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header-logo {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+#navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+}
+
+.current {
+    text-decoration: underline;
+}

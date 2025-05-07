@@ -1,12 +1,25 @@
-import kasaLogo from '../assets/logo.svg';
-function Header() {
+import "./Header.scss";
+import kasaLogo from "../assets/logo.png";
+
+export default function Header() {
   return (
-    <header className="bg-gray-800 text-black p-4">
-      <svg src={kasaLogo} alt="Kasa Logo"/>
-      <p>Accueil</p>
-      <p>A Propos</p>
+    <header id="header">
+      <div id="header-logo">
+        <img src={kasaLogo} alt="Kasa Logo" />
+      </div>
+
+      <div id="navigation">
+        <p>Accueil</p>
+        <p>A Propos</p>
+      </div>
     </header>
   );
 }
 
-export default Header;
+// function ifCurrent() {
+//   document.querySelectorAll("a").forEach((link) => {
+//     if (link.href === window.location.href) {
+//       link.classList.add("current");
+//     }
+//   });
+// }
