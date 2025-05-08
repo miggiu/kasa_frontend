@@ -9,16 +9,23 @@
     max-height: 250px;
 }
 
-#navigation {
+#navigation-container {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 24px;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
     margin: 0;
 }
 
-.current {
+#navigation-list{
+    display: flex;
+    gap: 60px;
+}
+
+#navigation-list a {
+    color: black;
+    text-decoration: none;
+}
+
+#navigation-list a.current {
     text-decoration: underline;
 }

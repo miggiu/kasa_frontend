@@ -1,0 +1,43 @@
+// .accordion{
+//     display: flex;
+// flex-direction: column;
+// justify-content: center;
+// margin: 2rem 0;
+// border: 1px solid black;
+// border-radius: 6px;
+// overflow: hidden;
+// margin: 0;
+// padding: 0;
+// }
+
+#accordion-list{
+list-style: none;
+}
+
+#accordion-item {
+    background-color: #1e2130;
+  }
+
+  
+.accordion-item-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    vertical-align: middle;
+    margin: 0 0 25px 0;
+    padding: 1rem;
+    background-color: #FF6060;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .accordion-item-content {
+    display: none;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .open {
+    display: block;
+  }
