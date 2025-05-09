@@ -1,26 +1,41 @@
 import "./accordion-data.js";
 import "./Accordion.scss";
+import accordionArrow from "/accordion-arrow.png";
 
-import { useAccordionContext } from "./Accordion.jsx";
-export default function AccordionItem({ title, content, index }) {
-    const { openItemId, openItem, closeItem } = useAccordionContext();
 
-    const isOpen = openItemId === index;
+export default function AccordionItem({title, content, index, openItems, openItem, closeItem}) {
+
+    const isOpen = openItems.has(index);
 
     function handleClick() {
         if (isOpen) {
-            closeItem();
+            closeItem(index);
         } else {
             openItem(index);
         }
     }
 
     return (
-        <li id="accordion-item">
-        <h3 onClick={handleClick} class="accordion-item-title">{title}</h3>
-        <article  className={isOpen ? 'accordion-item-content open' : 'accordion-item-content'}>
-        <p>{content}</p>
-        </article>
-    </li>
-    )
+        <li
+            id="accordion-item"
+            className="fade-in"
+        >
+            <div id="title-container">
+                <h3 className="accordion-item-title">{title}</h3>
+                <img 
+                    src={accordionArrow} 
+                    id="accordion-arrow" 
+                    alt="accordion-arrow" 
+                    onClick={handleClick}
+                    style={{ 
+                        transform: isOpen ? 'rotate(-180deg)' : 'rotate(0)', 
+                        transition: 'transform 0.6s ease' 
+                    }}
+                />
+            </div>
+            <article className={isOpen ? 'accordion-item-content open' : 'accordion-item-content'}>
+                <p>{content}</p>
+            </article>
+        </li>
+    );
 }

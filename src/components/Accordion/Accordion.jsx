@@ -1,39 +1,42 @@
 import "./Accordion.scss";
-import { createContext, useContext, useState } from "react";
+import React, { useState } from "react";
 
-const AccordionContext = createContext();
+export default function Accordion({ children }) {
+    const [openItems, setOpenItems] = useState(new Set());
 
-export function useAccordionContext() {
-    const context = useContext(AccordionContext);
-    if (!context) {
-        throw new Error("Accordion-related components must be wrapped by <Accordion>");
+    function openItem(index) {
+        setOpenItems(prev => {
+            const newSet = new Set(prev);
+            newSet.add(index);
+            return newSet;
+        });
     }
-    return context;
-}
 
-export default function Accordion({children}) {
-    const [openItemId, setOpenItemId] = useState()
-
-        function openItem(index){
-            setOpenItemId(index)
-        }
-
-        function closeItem(){
-            setOpenItemId(null)
-        }
-
-        const contextValue = {
-        openItemId,
-        openItem,
-        closeItem,
+    function closeItem(index) {
+        setOpenItems(prev => {
+            const newSet = new Set(prev);
+            newSet.delete(index);
+            return newSet;
+        });
     }
+
+
+    const childrenWithProps = React.Children.map(children, (child, index) => {
+        if (React.isValidElement(child)) {
+            return React.cloneElement(child, {
+                openItems,
+                openItem,
+                closeItem,
+                index
+            });
+        }
+        return child;
+    });
     return (
-        <AccordionContext.Provider value={contextValue}>
-            <div className="accordion">
-                <ul id="accordion-list">
-                    {children}
-                </ul> 
-            </div>
-        </AccordionContext.Provider>
+        <section className="accordion accordion-margin">
+            <ul id="accordion-list">
+                {childrenWithProps}
+            </ul>
+        </section>
     );
 }  

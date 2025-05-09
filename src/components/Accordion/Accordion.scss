@@ -1,43 +1,89 @@
-// .accordion{
-//     display: flex;
-// flex-direction: column;
-// justify-content: center;
-// margin: 2rem 0;
-// border: 1px solid black;
-// border-radius: 6px;
-// overflow: hidden;
-// margin: 0;
-// padding: 0;
-// }
-
-#accordion-list{
-list-style: none;
+.accordion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40%;
 }
 
-#accordion-item {
-    background-color: #1e2130;
-  }
+.accordion-margin{
+margin: 45px 200px 50px 200px;
+}
 
-  
+#title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FF6060;
+  border-radius: 5px;
+  padding-left: 1rem;
+}
+
+#accordion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .accordion-item-title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    vertical-align: middle;
-    margin: 0 0 25px 0;
-    padding: 1rem;
-    background-color: #FF6060;
-    cursor: pointer;
-    color: white;
-    border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+
+#accordion-item {
+  margin: 0 0 25px 0;
+}
+
+#accordion-arrow {
+  cursor: pointer;
+  margin: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
 
-  .accordion-item-content {
-    display: none;
-    padding: 1rem;
-    background-color: white;
+  to {
+    opacity: 1;
   }
+}
 
-  .open {
-    display: block;
-  }
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.accordion-item-content {
+  border-radius: 0 0 5px 5px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #F6F6F673;
+  opacity: 0.9;
+  border-radius: 0 0 5px 5px;
+  padding: 0 1rem; 
+  transition: max-height 0.4s ease-out, padding 0.5s ease; 
+}
+
+.accordion-item-content.open {
+  max-height: 500px; 
+  padding: 1rem;
+}
+
+.accordion-item-content p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.accordion-item-content.open p {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s; /* Delayed for smooth appearance */
+}

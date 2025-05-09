@@ -3,17 +3,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.scss";
 
-import Homepage from "./pages/Home.jsx";
-import AboutPage from "./pages/About.jsx";
-import ApartmentPage from "./pages/Apartment.jsx";
-import ErrorPage from "./pages/Error.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import ApartmentPage from "./pages/ApartmentPage.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 // localhost:5174/
 
 const router = createBrowserRouter([
 	{
 	  path: "/",
-	  element: <Homepage />,
+	  element: <HomePage />,
 	  errorElement: <ErrorPage />,
 	},
 	{

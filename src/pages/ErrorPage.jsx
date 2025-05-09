@@ -6,7 +6,7 @@ import { Link } from "react-router";
 export default function ErrorPage() {
   return (
     <div>
-      <Header />
+      <Header className="margin"/>
       <section id="error-container">
       <h1>404</h1>
       <p>Oups! La page que vous demandez n'existe pas.</p>
@@ -18,3 +18,4 @@ export default function ErrorPage() {
   );
 }
 
+//rename pages avec nom de fonction

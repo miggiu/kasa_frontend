@@ -3,13 +3,15 @@ import "./Header.scss";
 import kasaLogo from "/logo.png";
 
 
-export default function Header() {
+export default function Header({ className }) {
   const location = useLocation();
 
   return (
-    <header id="header">
+    <header id="header" className={className}>
       <div id="header-logo">
-        <img src={kasaLogo} alt="Kasa Logo" />
+        <Link to="/">
+          <img src={kasaLogo} alt="Kasa Logo" />
+        </Link>
       </div>
 
       <div id="navigation-container">
