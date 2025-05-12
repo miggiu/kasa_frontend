@@ -77,6 +77,25 @@ npm run build
 ```
 
 ---
+
+### Usable Routes 
+Here is a list of usable Routes:
+
+```bash
+# HomePage :
+ `${yourUrl}/`
+
+# AboutPage :
+ `${yourUrl}/about`
+
+# ApartmentPage :
+ `${yourUrl}/apartment/${propertiesData.id}`
+
+# We have an ErrorPage set-up with a redirection to the HomePage for any URL out of those specified above
+```
+
+---
+
 ## Acknowledgments
 - Thanks to the creators of React, React Router, Vite and Docker.
 - Special thanks to https://github.com/Ileriayo/markdown-badges for the badges used in this README.md file. 
