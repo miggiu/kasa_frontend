@@ -7,7 +7,6 @@ import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ApartmentPage from "./pages/ApartmentPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
-import propertiesData from "./pages/HomePage.jsx";
 // localhost:5174/
 
 const router = createBrowserRouter([
@@ -22,7 +21,7 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage />,
 	},
 	{
-		path: `/apartment/${propertiesData.id}`,
+		path: "/apartment/:id",
 		element: <ApartmentPage />,
 		errorElement: <ErrorPage />,
 	}

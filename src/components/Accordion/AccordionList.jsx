@@ -1,16 +1,17 @@
 import Accordion from './Accordion';
 import AccordionItem from './AccordionItem';
-import accordionData from './accordion-data';
 
-export default function AccordionList() {
+
+export default function AccordionList({ dataSource }) {
   return (
     <Accordion>
-      {accordionData.map((item, index) => (
+      {dataSource && dataSource.map((item, index) => (
         <AccordionItem
-          key={index} 
-          index={index} 
+          key={index}
+          index={index}
           title={item.title}
           content={item.content}
+          isArray={item.isArray}
         />
       ))}
     </Accordion>

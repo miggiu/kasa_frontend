@@ -1,11 +1,17 @@
 import "./Card.scss"
-
+import { useNavigate } from "react-router";
 export default function Card({ propertiesData }) {
 
+    const navigate = useNavigate()
+    
     function handleClick(event) {
         const cardId = event.currentTarget.id;
+        const apartmentId = cardId.split('-')[1];
         console.log('you clicked on', cardId);
-        window.open(`${BASE_API_URL}apartment/` + cardId)
+        if (cardId) {
+          navigate(`/apartment/${apartmentId}`)
+        }
+        
     }
 
     return (
