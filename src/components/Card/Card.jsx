@@ -4,8 +4,8 @@ export default function Card({ propertiesData }) {
 
     function handleClick(event) {
         const cardId = event.currentTarget.id;
-       console.log('you clicked on', cardId);
-       window.open(`${BASE_API_URL}properties/` + cardId)
+        console.log('you clicked on', cardId);
+        window.open(`${BASE_API_URL}apartment/` + cardId)
     }
 
     return (
@@ -20,7 +20,7 @@ export default function Card({ propertiesData }) {
                     >
                         <img src={property.cover} alt={property.title} className="card-img" />
                         <h2 className="card-title"
-                        key={property.id}>{property.title}</h2>
+                            key={property.id}>{property.title}</h2>
                     </div>
                 ))
             ) : (
