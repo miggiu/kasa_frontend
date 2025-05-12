@@ -1,12 +1,20 @@
 import "./Carousel.scss";
 
-export default function Carousel({ pictures }) {
-    
+export default function Carousel({ propertiesData }) {
     return (
         <div className="carousel-container">
-            <div className="carousel-images">
-                {pictures.map((picture, index) => (
-                    <img key={index} src={picture} />))}
-            </div>
-        </div>)
+            {propertiesData && propertiesData.length > 0 ? (
+                propertiesData.map((property) => (
+                    <div className="carousel-images">
+                        <img key={property.index} src={property.picture} />
+                    </div>
+                ))
+            ) : (
+                <div className="loading-container">
+                    <p>Chargement de la location...</p>
+                </div>
+            )
+            }
+        </div>
+    )
 }

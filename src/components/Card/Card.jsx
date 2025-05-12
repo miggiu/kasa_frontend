@@ -5,6 +5,7 @@ export default function Card({ propertiesData }) {
     function handleClick(event) {
         const cardId = event.currentTarget.id;
        console.log('you clicked on', cardId);
+       window.open(`${BASE_API_URL}properties/` + cardId)
     }
 
     return (
