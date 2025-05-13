@@ -1,13 +1,15 @@
 import "./Carousel.scss";
 
 import { useState } from "react";
+import leftArrow from "/arrow-back.png"
+import rightArrow from "/arrow-forward.png"
 
 
 export default function Carousel({ propertyData }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    if (!propertyData) || propertyData.length === 0) {
+    if (!propertyData || propertyData.length === 0) {
         return (
             <div className="loading-container">
                 <p>Chargement de la location...</p>
