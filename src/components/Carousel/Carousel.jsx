@@ -46,12 +46,13 @@ export default function Carousel({ propertyData }) {
             <div className="carousel-container">
                 <div className="carousel-images">
                     <img
+                        id="apt-pictures"
                         src={property.pictures[currentIndex]}
                         alt={`${property.title} - Image ${currentIndex + 1}`}
                     />
 
                     {totalImages > 1 && (
-                        <>
+                        <div className="arrows">
                             <button className="arrow left-arrow" onClick={prevSlide}>
                                 <img src={leftArrow} alt="Précédent" />
                             </button>
@@ -63,7 +64,8 @@ export default function Carousel({ propertyData }) {
                             <div className="image-counter">
                                 {currentIndex + 1}/{totalImages}
                             </div>
-                        </>
+                        </div>
+
                     )}
                 </div>
             </div>
