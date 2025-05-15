@@ -1,0 +1,17 @@
+#tag-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;  
+}
+
+.tag{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: white;
+    background-color: #FF6060;
+    border-radius: 12px;
+    padding: 5px 40px 5px 40px;
+}

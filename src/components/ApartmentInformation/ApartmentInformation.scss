@@ -1,0 +1,75 @@
+#apartment-information{
+    margin-top: 20px;
+}
+
+.spacing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 143%;
+    vertical-align: bottom;
+    color: #FF6060;
+    margin: 0;
+}
+
+.location {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 143%;
+    vertical-align: bottom;
+    margin: 0 0 10px 0; 
+}
+
+.host-information{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.host-name{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 143%;
+    vertical-align: bottom;
+    color: #FF6060;
+    text-align: right;
+    flex-wrap: wrap;
+    display: flex;
+    width: 50%;
+    margin: 0 10px 0 0; 
+}
+
+.host-picture{
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+
+.tags-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#rating-container{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+}
+
+.star-active{
+   color: #FF6060;
+}
+
+.star-inactive{
+    color: #E3E3E3;
+}

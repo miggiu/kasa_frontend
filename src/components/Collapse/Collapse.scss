@@ -1,11 +1,11 @@
-.accordion{
+.collapse{
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 40%;
 }
 
-.accordion-margin{
+.collapse-margin{
 margin: 45px 200px 50px 200px;
 }
 
@@ -18,13 +18,13 @@ margin: 45px 200px 50px 200px;
   padding-left: 1rem;
 }
 
-#accordion-list {
+#collapse-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.accordion-item-title {
+.collapse-item-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -33,11 +33,11 @@ margin: 45px 200px 50px 200px;
 }
 
 
-#accordion-item {
+#collapse-item {
   margin: 0 0 25px 0;
 }
 
-#accordion-arrow {
+#collapse-arrow {
   cursor: pointer;
   margin: 10px;
 }
@@ -56,25 +56,24 @@ margin: 45px 200px 50px 200px;
   animation: fadeIn 0.5s ease-in-out;
 }
 
-.accordion-item-content {
+.collapse-item-content {
   border-radius: 0 0 5px 5px;
   max-height: 0;
   overflow: hidden;
   background-color: #F6F6F673;
   opacity: 0.9;
-  border-radius: 0 0 5px 5px;
   padding: 0 1rem; 
   transition: max-height 0.4s ease-out, padding 0.5s ease; 
 }
 
-.accordion-item-content.open {
+.collapse-item-content.open {
   max-height: 500px; 
   padding: 1rem;
 }
 
-.accordion-item-content p {
+.collapse-item-content p {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 200;
   font-size: 20px;
   margin: 0;
   opacity: 0;
@@ -82,8 +81,26 @@ margin: 45px 200px 50px 200px;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.accordion-item-content.open p {
+.collapse-item-content.open p {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s; /* Delayed for smooth appearance */
 }
+
+// specific for the integration in apartment page
+
+.for-apartment-page{
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+  ul {
+     padding-left: 5px;
+  }
+  li {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 200;
+      font-size: 20px;
+      width:100%;
+      list-style: none;
+  }
+} 

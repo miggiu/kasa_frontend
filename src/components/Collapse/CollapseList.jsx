@@ -1,12 +1,12 @@
-import Accordion from './Accordion';
-import AccordionItem from './AccordionItem';
+import Collapse from './Collapse';
+import CollapseItem from './CollapseItem';
 
 
-export default function AccordionList({ dataSource }) {
+export default function CollapseList({ dataSource, className }) {
   return (
-    <Accordion>
+    <Collapse className={className}>
       {dataSource && dataSource.map((item, index) => (
-        <AccordionItem
+        <CollapseItem
           key={index}
           index={index}
           title={item.title}
@@ -14,6 +14,6 @@ export default function AccordionList({ dataSource }) {
           isArray={item.isArray}
         />
       ))}
-    </Accordion>
+    </Collapse>
   );
 }

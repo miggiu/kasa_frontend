@@ -1,11 +1,11 @@
-import "./Carousel.scss";
+import "./Slideshow.scss";
 
 import { useState } from "react";
 import leftArrow from "/arrow-back.png"
 import rightArrow from "/arrow-forward.png"
 
 
-export default function Carousel({ propertyData }) {
+export default function Slideshow({ propertyData }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,9 +42,9 @@ export default function Carousel({ propertyData }) {
     };
 
     return (
-        <section id="apartment-page">
-            <div className="carousel-container">
-                <div className="carousel-images">
+        <section id="apartment-page" className="margin">
+            <div className="slideshow-container">
+                <div className="slideshow-images">
                     <img
                         id="apt-pictures"
                         src={property.pictures[currentIndex]}
@@ -52,20 +52,21 @@ export default function Carousel({ propertyData }) {
                     />
 
                     {totalImages > 1 && (
-                        <div className="arrows">
-                            <button className="arrow left-arrow" onClick={prevSlide}>
-                                <img src={leftArrow} alt="Précédent" />
-                            </button>
+                        <>
+                            <div className="arrows">
+                                <button className="arrow left-arrow" onClick={prevSlide}>
+                                    <img src={leftArrow} alt="Précédent" />
+                                </button>
 
-                            <button className="arrow right-arrow" onClick={nextSlide}>
-                                <img src={rightArrow} alt="Suivant" />
-                            </button>
+                                <button className="arrow right-arrow" onClick={nextSlide}>
+                                    <img src={rightArrow} alt="Suivant" />
+                                </button>
 
-                            <div className="image-counter">
-                                {currentIndex + 1}/{totalImages}
+                                <div className="image-counter">
+                                    {currentIndex + 1}/{totalImages}
+                                </div>
                             </div>
-                        </div>
-
+                        </>
                     )}
                 </div>
             </div>

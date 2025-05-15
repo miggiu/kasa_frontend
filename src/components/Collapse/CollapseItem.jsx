@@ -1,9 +1,9 @@
-import "./accordion-data.js";
-import "./Accordion.scss";
-import accordionArrow from "/accordion-arrow.png";
+import "./collapse-data.js";
+import "./Collapse.scss";
+import collapseArrow from "/collapse-arrow.png";
 
 
-export default function AccordionItem({ title, content, index, openItems, openItem, closeItem, props }) {
+export default function CollapseItem({ title, content, index, openItems, openItem, closeItem, className = '' }) {
 
     const isOpen = openItems.has(index);
 
@@ -18,29 +18,28 @@ export default function AccordionItem({ title, content, index, openItems, openIt
     const renderContent = () => {
         if (Array.isArray(content)) {
             return (
-                <ul className="equipment-list">
+                <ul className={`equipment-list ${className}`}>
                     {content.map((item, i) => (
-                        <li key={i}>{item}</li>
+                        <li key={i} className={className}>{item}</li>
                     ))}
                 </ul>
             );
         }
 
-        // Si ce n'est pas un tableau, retourner un paragraphe
         return <p>{content}</p>;
     };
 
     return (
         <li
-            id="accordion-item"
-            className="fade-in"
+            id="collapse-item"
+            className={`fade-in ${className}`}
         >
             <div id="title-container">
-                <h3 className="accordion-item-title">{title}</h3>
+                <h3 className="collapse-item-title">{title}</h3>
                 <img
-                    src={accordionArrow}
-                    id="accordion-arrow"
-                    alt="accordion-arrow"
+                    src={collapseArrow}
+                    id="collapse-arrow"
+                    alt="collapse-arrow"
                     onClick={handleClick}
                     style={{
                         transform: isOpen ? 'rotate(-180deg)' : 'rotate(0)',
@@ -48,7 +47,7 @@ export default function AccordionItem({ title, content, index, openItems, openIt
                     }}
                 />
             </div>
-            <article className={isOpen ? 'accordion-item-content open' : 'accordion-item-content'}>
+            <article className={isOpen ? 'collapse-item-content open' : 'collapse-item-content'}>
                 {renderContent()}
             </article>
         </li>

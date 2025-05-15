@@ -1,7 +1,7 @@
 import Header from "../components/Header/Header.jsx";
 import Banner from "../components/Banner/Banner.jsx";
-import AccordionList from "../components/Accordion/AccordionList.jsx";
-import aboutAccordionData from "../components/Accordion/accordion-data.js"
+import CollapseList from "../components/Collapse/CollapseList.jsx";
+import aboutCollapseData from "../components/Collapse/collapse-data.js"
 import Footer from "../components/Footer/Footer.jsx";
 
 import "../index.scss";
@@ -13,7 +13,7 @@ export default function AboutPage() {
       <Header className="margin" />
       <section id="about-container">
         <Banner image="./about-banner.png" className="margin" />
-        <AccordionList dataSource={aboutAccordionData} className="margin" />
+        <CollapseList dataSource={aboutCollapseData} className="margin collapse-margin" />
       </section>
       <Footer />
     </div>

@@ -1,8 +1,8 @@
 import Header from "../components/Header/Header.jsx";
 import Footer from "../components/Footer/Footer.jsx";
-import Carousel from "../components/Carousel/Carousel.jsx";
+import Slideshow from "../components/Slideshow/Slideshow.jsx";
 import ApartmentInformation from "../components/ApartmentInformation/ApartmentInformation.jsx";
-import AccordionList from "../components/Accordion/AccordionList.jsx";
+import CollapseList from "../components/Collapse/CollapseList.jsx";
 
 import { BASE_API_URL } from "../variables.js"
 import { useEffect, useState } from "react";
@@ -56,11 +56,11 @@ export default function ApartmentPage() {
   return (
     <div>
       <Header className="margin" />
-      <Carousel
+      <Slideshow
         propertyData={[property]} />
       <ApartmentInformation
         propertyData={property} />
-      <AccordionList dataSource={apartmentData} />
+      <CollapseList className={"for-apartment-page margin"} dataSource={apartmentData} />
       <Footer />
     </div>
   );

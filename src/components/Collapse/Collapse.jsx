@@ -1,7 +1,7 @@
-import "./Accordion.scss";
+import "./Collapse.scss";
 import React, { useState } from "react";
 
-export default function Accordion({ children }) {
+export default function Collapse({ children, className = '' }) {
     const [openItems, setOpenItems] = useState(new Set());
 
     function openItem(index) {
@@ -33,8 +33,8 @@ export default function Accordion({ children }) {
         return child;
     });
     return (
-        <section className="accordion accordion-margin">
-            <ul id="accordion-list">
+        <section className={`collapse ${className}`}>
+            <ul id="collapse-list" className={className}>
                 {childrenWithProps}
             </ul>
         </section>
