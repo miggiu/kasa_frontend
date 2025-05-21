@@ -48,4 +48,26 @@
     max-width: inherit;
     height: 85%;
     padding: 20px;
+    text-shadow: black 0px 2px 2px;
+}
+
+// mobile styles 
+@media screen and (max-width: 768px) {
+    #global-cards-container {
+        margin-top: 0;
+    }
+
+    #card-container {
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 20px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .card-title {
+        font-size: 16px;
+        padding: 10px;
+    }
 }

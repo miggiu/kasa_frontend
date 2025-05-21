@@ -1,10 +1,10 @@
 #tag-container {
     display: flex;
     flex-direction: row;
-    gap: 10px;  
+    gap: 10px;
 }
 
-.tag{
+.tag {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 14px;
@@ -14,4 +14,17 @@
     background-color: #FF6060;
     border-radius: 12px;
     padding: 5px 40px 5px 40px;
+}
+
+// mobile styles
+
+@media screen and (max-width: 768px) {
+    #tag-container {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+    .tag {
+        font-size: 10px;
+        border-radius: 10px;
+    }
 }

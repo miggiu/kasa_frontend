@@ -3,7 +3,7 @@ import Footer from "../components/Footer/Footer";
 import "../index.scss";
 import { Link } from "react-router";
 
-export default function ErrorPage() {
+function ErrorPage() {
   return (
     <div>
       <Header className="margin" />
@@ -19,4 +19,5 @@ export default function ErrorPage() {
   );
 }
 
-//rename pages avec nom de fonction
+
+export default ErrorPage;

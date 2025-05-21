@@ -3,10 +3,11 @@ import Footer from "../components/Footer/Footer.jsx";
 import Slideshow from "../components/Slideshow/Slideshow.jsx";
 import ApartmentInformation from "../components/ApartmentInformation/ApartmentInformation.jsx";
 import CollapseList from "../components/Collapse/CollapseList.jsx";
+import ErrorPage from "./ErrorPage.jsx";
 
 import { BASE_API_URL } from "../variables.js"
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 
 export default function ApartmentPage() {
 
@@ -14,9 +15,15 @@ export default function ApartmentPage() {
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate()
 
   useEffect(() => {
+    if(error) {
+      navigate("/error")
+    }
+  }, [error, navigate]);
 
+  useEffect(() => {
     async function fetchProperty() {
       try {
         setLoading(true);
@@ -38,7 +45,6 @@ export default function ApartmentPage() {
   }, [id]);
 
   if (loading) return <div>Chargement en cours ...</div>
-  if (error) return <div>Nous avons des difficultés à charger l'appartement : {error} </div>
   if (!property) return <div>Appartement non trouvé</div>
 
   const apartmentData = [
@@ -60,7 +66,7 @@ export default function ApartmentPage() {
         propertyData={[property]} />
       <ApartmentInformation
         propertyData={property} />
-      <CollapseList className={"for-apartment-page margin"} dataSource={apartmentData} />
+      <CollapseList className={"for-apartment-page component-margin"} dataSource={apartmentData} />
       <Footer />
     </div>
   );

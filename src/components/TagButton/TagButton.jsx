@@ -1,6 +1,8 @@
 import "./TagButton.scss"
 
-export default function TagButton({ tags }) {
+import PropTypes from "prop-types"
+
+function TagButton({ tags }) {
     return (
         <div id="tag-container">
             {tags && tags.length > 0 ? (
@@ -17,3 +19,9 @@ export default function TagButton({ tags }) {
         </div>
     )
 }
+
+TagButton.propTypes = {
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
+
+export default TagButton

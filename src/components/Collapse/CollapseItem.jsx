@@ -1,9 +1,10 @@
 import "./collapse-data.js";
 import "./Collapse.scss";
+import PropTypes from "prop-types";
 import collapseArrow from "/collapse-arrow.png";
 
 
-export default function CollapseItem({ title, content, index, openItems, openItem, closeItem, className = '' }) {
+function CollapseItem({ title, content, index, openItems, openItem, closeItem, className = '' }) {
 
     const isOpen = openItems.has(index);
 
@@ -53,3 +54,18 @@ export default function CollapseItem({ title, content, index, openItems, openIte
         </li>
     );
 }
+
+CollapseItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string)
+    ]).isRequired,
+    index: PropTypes.number.isRequired,
+    openItems: PropTypes.instanceOf(Set).isRequired,
+    openItem: PropTypes.func.isRequired,
+    closeItem: PropTypes.func.isRequired,
+    className: PropTypes.string
+};
+
+export default CollapseItem;

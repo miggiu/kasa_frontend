@@ -1,6 +1,8 @@
 import "./Card.scss"
 import { useNavigate } from "react-router";
-export default function Card({ propertiesData }) {
+import PropTypes from "prop-types";
+
+function Card({ propertiesData }) {
 
     const navigate = useNavigate()
     
@@ -38,4 +40,19 @@ export default function Card({ propertiesData }) {
         </div>
     );
 }
+
+Card.propTypes = {
+    propertiesData: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number
+            ]).isRequired,
+            title: PropTypes.string.isRequired,
+            cover: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
+
+export default Card;
 

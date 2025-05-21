@@ -1,4 +1,4 @@
-#apartment-information{
+#apartment-information {
     margin-top: 20px;
 }
 
@@ -24,16 +24,26 @@ h3 {
     font-size: 18px;
     line-height: 143%;
     vertical-align: bottom;
-    margin: 0 0 10px 0; 
+    margin: 0 0 10px 0;
+}
+.host-desktop {
+    display: flex;
 }
 
-.host-information{
+.host-mobile {
+    display: none;
+}
+
+.host-information {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+  .host-information-mobile {
+    display: none;
+}
 
-.host-name{
+.host-name {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -44,32 +54,102 @@ h3 {
     flex-wrap: wrap;
     display: flex;
     width: 50%;
-    margin: 0 10px 0 0; 
+    margin: 0 10px 0 0;
 }
 
-.host-picture{
+.host-picture {
     border-radius: 50%;
     width: 65px;
     height: 65px;
 }
 
-.tags-rating{
+.tags-rating {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
 }
 
-#rating-container{
+#rating-container {
     display: flex;
     justify-content: end;
     gap: 10px;
     align-items: center;
 }
 
-.star-active{
-   color: #FF6060;
+.star {
+    font-size: 20px;
 }
 
-.star-inactive{
+.star-active {
+    color: #FF6060;
+}
+
+.star-inactive {
     color: #E3E3E3;
+}
+
+
+// mobile styles
+@media screen and (max-width: 768px) {
+    #apartment-information {
+        margin-top: 0;
+    }
+
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .location {
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+
+    .host-information-mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+    .host-mobile {
+       display: flex;
+       justify-content: flex-end;
+       align-items: flex-end;
+    }
+
+    .host-desktop {
+        display: none;
+    }
+
+    .host-name {
+        font-size: 12px;
+    }
+
+    .host-picture {
+        width: 32px;
+        height: 32px;
+    }
+
+    .tags-rating {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .star {
+        font-size: 12px;
+    }
+
+    .mobile-spacing {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 110px
+
+    }
+    
+
 }

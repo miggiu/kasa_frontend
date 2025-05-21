@@ -1,16 +1,18 @@
 import { Link, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
+
 import "./Header.scss";
-import kasaLogo from "/logo.png";
+import kasaLogo from "/logo.svg";
 
 
-export default function Header({ className }) {
+function Header({ className }) {
   const location = useLocation();
 
   return (
     <header id="header" className={className}>
-      <div id="header-logo">
+      <div id="logo-container">
         <Link to="/">
-          <img src={kasaLogo} alt="Kasa Logo" />
+          <img src={kasaLogo} alt="Kasa Logo" className="header-logo" />
         </Link>
       </div>
 
@@ -28,4 +30,8 @@ export default function Header({ className }) {
   );
 }
 
+Header.propTypes = {
+  className: PropTypes.string,
+};
 
+export default Header;

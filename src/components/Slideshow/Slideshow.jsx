@@ -1,11 +1,13 @@
 import "./Slideshow.scss";
 
 import { useState } from "react";
-import leftArrow from "/arrow-back.png"
-import rightArrow from "/arrow-forward.png"
+import PropTypes from "prop-types";
+
+import leftArrow from "/arrow-back.svg"
+import rightArrow from "/arrow-forward.svg"
 
 
-export default function Slideshow({ propertyData }) {
+function Slideshow({ propertyData }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -73,3 +75,16 @@ export default function Slideshow({ propertyData }) {
         </section>
     );
 }
+
+
+Slideshow.propTypes = {
+    propertyData: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+        })
+    ).isRequired,
+};
+
+export default Slideshow;

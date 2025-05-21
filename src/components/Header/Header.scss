@@ -4,7 +4,7 @@
     justify-content: space-between;
 }
 
-#header-logo {
+#logo-container {
     max-width: 250px;
     max-height: 250px;
 }
@@ -28,4 +28,34 @@
 
 #navigation-list a.current {
     text-decoration: underline;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 3px;
+}
+
+// 
+@media screen and (max-width: 768px) {
+    #header {
+        align-items: center;
+        max-width: 100%;
+    }
+    .mobile-header {
+        display: flex;
+        max-width: 80%;
+        align-items: center;
+    }
+    .header-logo {
+        width: 145px;
+        height: 45px;
+    }
+
+    #navigation-list {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #navigation-list a {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    
 }

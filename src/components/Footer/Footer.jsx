@@ -2,7 +2,9 @@ import "./Footer.scss";
 import logoFooter from "/logo-footer.png";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+import PropTypes from "prop-types";
+
+function Footer() {
   return (
     <footer id="footer-container">
       <Link to="/">
@@ -12,3 +14,10 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+Footer.propTypes = {
+  logoFooter: PropTypes.string,
+};
+
+export default Footer;

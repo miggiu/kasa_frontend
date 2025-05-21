@@ -1,6 +1,7 @@
 import "./Banner.scss";
+import PropTypes from "prop-types";
 
-export default function Banner({title = "", image, id, className}) {
+function Banner({title = "", image, id, className}) {
 
   function showTitle() {
     if (title === "") {
@@ -17,3 +18,14 @@ export default function Banner({title = "", image, id, className}) {
     </section>
   );
 }
+
+Banner.propTypes = {
+   title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node]),
+  image: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  className: PropTypes.string
+};
+
+export default Banner;

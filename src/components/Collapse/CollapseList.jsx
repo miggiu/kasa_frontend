@@ -1,8 +1,10 @@
 import Collapse from './Collapse';
 import CollapseItem from './CollapseItem';
 
+import PropTypes from 'prop-types';
 
-export default function CollapseList({ dataSource, className }) {
+
+function CollapseList({ dataSource, className }) {
   return (
     <Collapse className={className}>
       {dataSource && dataSource.map((item, index) => (
@@ -17,3 +19,19 @@ export default function CollapseList({ dataSource, className }) {
     </Collapse>
   );
 }
+
+CollapseList.propTypes = {
+  dataSource: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+      ]).isRequired,
+      isArray: PropTypes.bool,
+    })
+  ).isRequired,
+  className: PropTypes.string,
+};
+
+export default CollapseList;

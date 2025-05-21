@@ -1,7 +1,8 @@
 import "./Collapse.scss";
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 
-export default function Collapse({ children, className = '' }) {
+function Collapse({ children, className = '' }) {
     const [openItems, setOpenItems] = useState(new Set());
 
     function openItem(index) {
@@ -40,3 +41,10 @@ export default function Collapse({ children, className = '' }) {
         </section>
     );
 }  
+
+Collapse.propTypes = {
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string
+};
+
+export default Collapse;

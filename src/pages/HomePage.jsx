@@ -28,7 +28,7 @@ function HomePage() {
       <Banner
         className="margin"
         image="./title-card-background.jpg"
-        title="Chez vous, partout et ailleurs"
+        title={<>Chez vous,<span className="comma"> partout et ailleurs</span></>}
       />
       <section id="global-cards-container" className="margin">
         <Card propertiesData={propertiesData.slice(0, 6)} />

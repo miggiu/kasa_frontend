@@ -49,12 +49,47 @@
   }
   
   .image-counter {
-    font-family: "montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    line-height: 143%;
     color: white;
     padding: 5px 10px;
     font-weight: 500;
+    font-size: 18px;
+  }
+
+  //mobile styles
+  @media screen and (max-width: 768px) {
+    .slideshow-container {
+      height: 100%;
+      border-radius: 10px;
+    }
+  
+    .slideshow-images {
+      height: 100%;
+      
+      img#apt-pictures {
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  button img{
+    width: 24px;
+    height: 24px;
+  }
+
+  .arrow.left-arrow {
+    left:-10px;
+  }
+
+  .arrow.right-arrow {
+    right: -10px;
+  }
+  
+    .image-counter {
+      display: none;
+    }
   }
