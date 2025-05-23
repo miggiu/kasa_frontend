@@ -9,12 +9,14 @@ import "../index.scss";
 export default function AboutPage() {
 
   return (
-    <div>
+    <div id="root">
       <Header className="margin" />
+      <main>
       <section id="about-container">
         <Banner image="./about-banner.png" className="margin" />
         <CollapseList dataSource={aboutCollapseData} className="margin collapse-margin" />
       </section>
+      </main>
       <Footer />
     </div>
   );

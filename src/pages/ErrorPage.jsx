@@ -5,8 +5,9 @@ import { Link } from "react-router";
 
 function ErrorPage() {
   return (
-    <div>
+    <div id="root">
       <Header className="margin" />
+      <main>
       <section id="error-container">
         <h1>404</h1>
         <p>Oups! La page que vous demandez n'existe pas.</p>
@@ -15,6 +16,7 @@ function ErrorPage() {
         </Link>
       </section>
       <Footer />
+      </main>
     </div>
   );
 }

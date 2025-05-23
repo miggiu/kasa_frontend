@@ -23,8 +23,9 @@ function HomePage() {
   }, []);
 
   return (
-    <div>
+    <div id="root">
       <Header className="margin" />
+      <main>
       <Banner
         className="margin"
         image="./title-card-background.jpg"
@@ -33,6 +34,7 @@ function HomePage() {
       <section id="global-cards-container" className="margin">
         <Card propertiesData={propertiesData.slice(0, 6)} />
       </section>
+      </main>
       <Footer />
     </div>
   );

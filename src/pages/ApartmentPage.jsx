@@ -60,13 +60,15 @@ export default function ApartmentPage() {
   ];
 
   return (
-    <div>
+    <div id="root">
       <Header className="margin" />
+      <main>
       <Slideshow
         propertyData={[property]} />
       <ApartmentInformation
         propertyData={property} />
       <CollapseList className={"for-apartment-page component-margin"} dataSource={apartmentData} />
+      </main>
       <Footer />
     </div>
   );
