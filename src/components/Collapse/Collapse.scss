@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 60%;
+  height: auto;
 }
 
 .collapse-margin {
@@ -57,6 +57,7 @@
 }
 
 .collapse-item-content {
+  z-index: 1;
   border-radius: 0 0 5px 5px;
   max-height: 0;
   overflow: hidden;
@@ -147,17 +148,36 @@
   }
 
   .collapse {
-    height: 100%;
+    height: auto;
   }
 
   #collapse-list {
     width: 100%;
+    height: auto;
+  }
+  
+  .collapse-item-title{
+     font-size: 13px
   }
 
+  #title-container {
+    height: 30px;
+    min-height: unset;
+    padding: 5px 10px;
+  }
+  .collapse-item-content p{
+   font-size: 14px;
+  }
 
+  #collapse-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
 
   // border styling 
   .collapse-margin {
-    margin: 0 20px 0 20px;
+    margin: 35px 20px 0 20px;
   }
 }
