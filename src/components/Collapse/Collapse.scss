@@ -111,7 +111,7 @@
 }
 
 // mobile styles
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px)  {
 
 
   .for-apartment-page {
@@ -180,4 +180,74 @@
   .collapse-margin {
     margin: 35px 20px 0 20px;
   }
+}
+@media screen and (min-width:768px) and (max-width: 1439px) {
+
+
+  .for-apartment-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    #title-container {
+      height: 40px;
+      min-height: unset;
+      padding: 5px 10px;
+      justify-content: space-between;
+      
+    }
+
+    #collapse-arrow {
+      margin: 5px;
+    }
+
+    h3 {
+      font-size: 18px;
+
+    }
+
+    ul {
+      padding-left: 5px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    li {
+      font-size: 16px;
+    }
+  }
+  
+  .collapse {
+    height: auto;
+    width: auto;
+    margin: 60px 100px 0 100px;
+  }
+
+  #collapse-list {
+    width: 100%;
+    height: auto;
+  }
+  
+  .collapse-item-title{
+     font-size: 13px
+  }
+
+  #title-container {
+    height: 30px;
+    min-height: unset;
+    padding: 5px 10px;
+  }
+  .collapse-item-content p{
+   font-size: 14px;
+  }
+
+  #collapse-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
 }

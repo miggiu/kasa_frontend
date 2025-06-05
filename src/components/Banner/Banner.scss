@@ -42,9 +42,50 @@
 }
 
 // mobile styles
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px)  {
   #title-card {
     height: 110px;
+    border-radius: 10px;
+    justify-content: flex-start;
+  }
+  
+  #banner-img {
+    height: inherit;
+    border-radius: 10px;
+  }
+    
+  
+  #title-card h1{
+    width: 100%;
+    font-size: 24px;
+    text-align: left;
+    padding-left: 16px;
+    line-height: normal;
+    vertical-align: bottom;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+  }
+
+ #title-card h1 > :first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  #title-card h1 .comma {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  #title-card h1 > :last-child {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width: 1439px) {
+ #title-card {
+    margin-top:10px;
+    height: 150px;
     border-radius: 10px;
     justify-content: flex-start;
   }

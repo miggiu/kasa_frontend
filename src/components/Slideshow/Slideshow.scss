@@ -26,6 +26,7 @@
     position: static; 
     width: 100%;
     height: 100%;
+    text-shadow: black 1px 1px 1px;
   }
   
   .arrow {
@@ -58,13 +59,15 @@
     padding: 5px 10px;
     font-weight: 500;
     font-size: 18px;
+    text-shadow: black 1px 1px 1px;
   }
 
   //mobile styles
-  @media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px)  {
     .slideshow-container {
-      height: 230px; // en px + about page collapse 
+      height: 230px; 
       border-radius: 10px;
+      margin: 0;
     }
   
     .slideshow-images {
@@ -90,5 +93,39 @@
   
     .image-counter {
       display: none;
+    }
+  }
+
+@media screen and (min-width:768px) and (max-width: 1439px) {
+    .slideshow-container {
+      height: 350px;
+      width: auto;
+      border-radius: 10px;
+      margin: 20px 40px 0 40px;
+    }
+  
+    .slideshow-images {
+      height: 100%;
+      
+      img#apt-pictures {
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  button img{
+    width: 44px;
+    height: 44px;
+  }
+
+  .arrow.left-arrow {
+    left:-10px;
+  }
+
+  .arrow.right-arrow {
+    right: -10px;
+  }
+  
+    .image-counter {
+      display: block;
     }
   }

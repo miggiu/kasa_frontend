@@ -92,7 +92,7 @@ h3 {
 
 
 // mobile styles
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px)  {
     #apartment-information {
         margin-top: 0;
     }
@@ -100,6 +100,7 @@ h3 {
 
     h3 {
         font-size: 18px;
+        margin: 10px 0 0  0;
     }
 
     .location {
@@ -156,4 +157,28 @@ h3 {
         margin: 0 20px 0 20px;
     }
 
+}
+
+@media screen and (min-width:768px) and (max-width: 1439px) {
+
+    .appartment-title h3 {
+        font-size: 28px;
+    }
+
+    .location {
+        margin-bottom: 25px;
+    }
+
+    .host-name{
+        font-size: 16px;
+        gap: 10px
+    }
+
+    .star {
+        font-size: 12px;
+    }
+
+    .component-margin{
+        margin: 0 60px 0 60px;
+    }
 }

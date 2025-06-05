@@ -36,7 +36,7 @@
 }
 
 // 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px)  {
     #header {
         align-items: center;
         max-width: fit-content;
@@ -62,4 +62,26 @@
         text-transform: uppercase;
     }
     
+}
+
+@media screen and (min-width:768px) and (max-width: 1439px) {
+     #header {
+      width: auto;
+    }
+    .header-logo {
+        margin-left: 20px;
+        width: 165px;                               
+        height: 65px;
+    }
+
+    #navigation-list {
+        flex-direction: row;
+        gap: 20px;
+        padding: 0 0 0 50px;
+    }
+
+    #navigation-list a {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
 }
