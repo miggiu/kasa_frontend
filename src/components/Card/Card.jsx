@@ -9,7 +9,6 @@ function Card({ propertiesData }) {
     function handleClick(event) {
         const cardId = event.currentTarget.id;
         const apartmentId = cardId.split('-')[1];
-        console.log('you clicked on', cardId);
         if (cardId) {
           navigate(`/apartment/${apartmentId}`)
         }

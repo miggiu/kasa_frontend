@@ -7,7 +7,7 @@ import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ApartmentPage from "./pages/ApartmentPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
-// localhost:5174/
+
 
 const router = createBrowserRouter([
 	{
@@ -31,8 +31,3 @@ createRoot(document.getElementById("root")).render(
 	<RouterProvider router={router} />
 );
 
-// function App() {
-//   return <RouterProvider router={router} />;
-// }
-
-// export default App;

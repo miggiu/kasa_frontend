@@ -13,10 +13,12 @@ function Banner({title = "", image, id, className}) {
 
   return (
     <section id="title-card" className={className}>
-      <img src={image} alt={id} id="banner-img" />
+      <img src={image} alt={id} id="banner-img" /> 
       {showTitle()}
     </section>
   );
+
+  
 }
 
 Banner.propTypes = {
