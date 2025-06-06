@@ -23,7 +23,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div id="root">
+    <div id="root" data-testid="home-page">
       <Header className="margin" />
       <main>
       <Banner

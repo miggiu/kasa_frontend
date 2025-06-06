@@ -9,7 +9,7 @@ import "../index.scss";
 export default function AboutPage() {
 
   return (
-    <div id="root">
+    <div id="root" data-testid="about-page">
       <Header className="margin" />
       <main>
       <section id="about-container">

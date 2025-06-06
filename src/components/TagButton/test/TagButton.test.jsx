@@ -25,7 +25,7 @@ describe("renders TagButton with only 1 tag", () => {
     });
 });
 
-describe("renders TagButton with only multiple tags", () => {
+describe("renders TagButton with multiple tags", () => {
     const tags = ["tag1", "tag2", "tag3"];
     const renderTagButton = () => render(<TagButton tags={tags} />);
 

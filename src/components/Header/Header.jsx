@@ -18,10 +18,10 @@ function Header({ className }) {
 
       <div id="navigation-container">
         <ul id="navigation-list">
-        <Link className={location.pathname === "/" ? "current" : ""} to="/">
+        <Link data-testid="nav-home" className={location.pathname === "/" ? "current" : ""} to="/">
             Accueil
           </Link>
-        <Link className={location.pathname === "/about" ? "current" : ""} to="/about">
+        <Link data-testid ="nav-about" className={location.pathname === "/about" ? "current" : ""} to="/about">
             A Propos
         </Link>
         </ul>
