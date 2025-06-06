@@ -4,10 +4,11 @@ Kasa Frontend is the front-end implementation of the Kasa platform.<br>Powered b
 
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 ---
@@ -25,6 +26,7 @@ Kasa Frontend is the front-end implementation of the Kasa platform.<br>Powered b
 - SASS/SCSS: Modular and reusable styling with advanced CSS features.
 - HTML: Semantic structure and accessibility.
 - Docker: Backend containerization for consistent environment setup.
+- Jest & React Testing Library: Comprehensive testing framework for components and utilities.
 
 ## Installation
 Set up the project locally :
@@ -43,7 +45,7 @@ Run the project locally with the following command:
 
 ```bash
 # Start the development server
-npm start
+npm run dev
 # Open your browser and navigate to the specified localhost:XXXX to view the application.
 ```
 
@@ -69,14 +71,23 @@ npm install
 npm start
 ```
 
+### Running unitary tests 
+We implemented unitary tests in each component, which you will find under the specific component _test_ folder. 
+```bash
+# Run the tests
+npm test 
+# Run the coverage test 
+npx jest --coverage
+# or
+npm run test:coverage
+```
+
 ### Build for Production
 To create an optimized build for production, run:
 
 ```bash
 npm run build
 ```
-
----
 
 ### Usable Routes 
 Here is a list of usable Routes:
@@ -89,7 +100,7 @@ Here is a list of usable Routes:
  `${yourUrl}/about`
 
 # ApartmentPage :
- `${yourUrl}/apartment/${propertiesData.id}`
+ `${yourUrl}/apartment/:id`
 
 # We have an ErrorPage set-up with a redirection to the HomePage for any URL out of those specified above
 ```
@@ -97,6 +108,6 @@ Here is a list of usable Routes:
 ---
 
 ## Acknowledgments
-- Thanks to the creators of React, React Router, Vite and Docker.
+- Thanks to the creators of React, React Router, Vite, Jest and Docker.
 - Special thanks to https://github.com/Ileriayo/markdown-badges for the badges used in this README.md file. 
 
