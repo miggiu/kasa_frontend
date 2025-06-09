@@ -81,6 +81,7 @@ npx jest --coverage
 # or
 npm run test:coverage
 ```
+You will find the HTML report under coverage\lcov-report\index.html, which you can then open in localhost, using LiveServer extension (ritwickdey.LiveServer) for exemple. 
 
 ### Build for Production
 To create an optimized build for production, run:
@@ -109,5 +110,5 @@ Here is a list of usable Routes:
 
 ## Acknowledgments
 - Thanks to the creators of React, React Router, Vite, Jest and Docker.
-- Special thanks to https://github.com/Ileriayo/markdown-badges for the badges used in this README.md file. 
+- Special thanks to https://github.com/Ileriayo/markdown-badges for the badges used in this README.md file & ritwickdey.LiveServer extension mentionned above. 
 

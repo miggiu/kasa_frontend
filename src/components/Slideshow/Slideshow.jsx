@@ -7,20 +7,36 @@ import PropTypes from "prop-types";
 import leftArrow from "/arrow-back.svg";
 import rightArrow from "/arrow-forward.svg";
 
+/**
+ * Slideshow component displays a carousel of property images
+ * Features navigation arrows, image counter, and responsive behavior
+ *
+ * @param {Array} propertyData - Array containing property information including images
+ * @returns {JSX.Element} The rendered slideshow
+ */
+
 function Slideshow({ propertyData }) {
+	// State to track the currently displayed image index
 	const [currentIndex, setCurrentIndex] = useState(0);
+	// State to track if the device is in mobile viewport
 	const [isMobile, setIsMobile] = useState(false);
 
+	/**
+	 * Effect hook to handle responsive design behavior
+	 * Sets isMobile state based on viewport width and adds resize listener
+	 */
 	useEffect(() => {
 		const checkScreenSize = () => {
 			setIsMobile(window.matchMedia("(max-width: 767px)").matches);
 		};
 
+		// Initial check on component mount
 		checkScreenSize();
 		window.addEventListener("resize", checkScreenSize);
 		return () => window.removeEventListener("resize", checkScreenSize);
 	}, []);
 
+	// If propertyData is empty or undefined, show loading state
 	if (!propertyData || propertyData.length === 0) {
 		return (
 			<div className='loading-container'>
@@ -29,6 +45,7 @@ function Slideshow({ propertyData }) {
 		);
 	}
 
+	// If propertyData is not an array or has no items, show error state
 	const property = propertyData[0];
 
 	if (!property.pictures || property.pictures.length === 0) {
@@ -39,14 +56,23 @@ function Slideshow({ propertyData }) {
 		);
 	}
 
+	// Store total number of images for navigation and counter display
 	const totalImages = property.pictures.length;
 
+	/**
+	 * Advances to the next image in the slideshow
+	 * Loops back to the first image after reaching the end
+	 */
 	const nextSlide = () => {
 		setCurrentIndex((prevIndex) =>
 			prevIndex === totalImages - 1 ? 0 : prevIndex + 1
 		);
 	};
 
+	/**
+	 * Goes to the previous image in the slideshow
+	 * Loops to the last image when at the first image
+	 */
 	const prevSlide = () => {
 		setCurrentIndex((prevIndex) =>
 			prevIndex === 0 ? totalImages - 1 : prevIndex - 1
@@ -102,6 +128,8 @@ function Slideshow({ propertyData }) {
 	);
 }
 
+// PropTypes validation ensures component receives the expected data structure
+// Used as a transition to TypeScript in the future
 Slideshow.propTypes = {
 	propertyData: PropTypes.arrayOf(
 		PropTypes.shape({
