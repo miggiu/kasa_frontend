@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { test, expect, afterEach, beforeAll, jest } from "@jest/globals";
 import { userEvent } from "@testing-library/user-event";
-import Slideshow from "../Slideshow.jsx";
+import Slideshow from "../components/Slideshow/Slideshow.jsx";
 
 // Set up userEvent for simulating user interactions like clicks
 const user = userEvent.setup();

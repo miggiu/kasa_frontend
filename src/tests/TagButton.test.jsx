@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { test, expect, describe } from "@jest/globals";
-import TagButton from "../TagButton.jsx";
+import TagButton from "../components/TagButton/TagButton.jsx";
 
 describe("shows error if no tags ", () => {
 	// Setup test with empty string instead of an array

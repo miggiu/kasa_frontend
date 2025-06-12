@@ -2,8 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { jest, beforeEach, describe, expect, test } from "@jest/globals";
-import { MemoryRouter } from "react-router-dom";
-import Card from "../Card";
+import Card from "../components/Card/Card.jsx";
 
 // This function will capture navigation events
 // from the Card component so we can verify correct routing behavior

@@ -2,8 +2,8 @@ import React from "react";
 import { render, screen, within } from "@testing-library/react";
 import { test, expect, jest, describe } from "@jest/globals";
 import { userEvent } from "@testing-library/user-event";
-import CollapseItem from "../CollapseItem.jsx";
-import Collapse from "../Collapse.jsx";
+import CollapseItem from "../components/Collapse/CollapseItem.jsx";
+import Collapse from "../components/Collapse/Collapse.jsx";
 
 // Setup user event for all tests
 const user = userEvent.setup();

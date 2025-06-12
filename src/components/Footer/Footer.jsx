@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
 	return (
-		<footer id='footer-container role="contentinfo">'>
+		<footer id='footer-container' role="contentinfo">
 			<Link to='/'>
 				<img
 					src={logoFooter}

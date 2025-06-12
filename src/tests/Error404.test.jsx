@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter, MemoryRouter, Routes, Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import { test, expect } from "@jest/globals";
-import Error404 from "../Error404";
+import Error404 from "../components/Error404/Error404.jsx";
 
 // Verifies that the Error404 component renders correctly with expected elements
 test("renders Error404 component with correct elements", () => {

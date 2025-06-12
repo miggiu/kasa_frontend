@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { test, expect, describe } from "@jest/globals";
-import Banner from "../Banner.jsx";
+import Banner from "../components/Banner/Banner.jsx";
 
 describe("inserts banner props ", () => {
 	// Helper function to render the Banner with consistent props

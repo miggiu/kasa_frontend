@@ -2,9 +2,9 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { expect, test, describe } from "@jest/globals";
 import userEvent from "@testing-library/user-event";
-import ApartmentInformation from "../ApartmentInformation";
-import Collapse from "../../Collapse/Collapse";
-import CollapseItem from "../../Collapse/CollapseItem";
+import ApartmentInformation from "../components/ApartmentInformation/ApartmentInformation.jsx";
+import Collapse from "../components/Collapse/Collapse.jsx";
+import CollapseItem from "../components/Collapse/CollapseItem.jsx";
 
 // Comprehensive mock apartment data that simulates the real data structure
 // This includes all fields needed to test the component thoroughly:

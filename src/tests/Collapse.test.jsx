@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { test, expect, jest } from "@jest/globals";
 import { describe, beforeEach } from "@jest/globals";
-import Collapse from "../Collapse";
+import Collapse from "../components/Collapse/Collapse.jsx";
 
 // Create a mock implementation of the CollapseItem component
 // This allows us to:
@@ -16,7 +16,7 @@ const MockCollapseItem = jest.fn(() => (
 // Mock the entire CollapseItem module to return our mock implementation
 // This intercepts any imports of CollapseItem in the Collapse component
 // and replaces them with our mock function that captures props
-jest.mock("../CollapseItem", () => (props) => MockCollapseItem(props));
+jest.mock("../components/Collapse/CollapseItem", () => (props) => MockCollapseItem(props));
 
 describe("Collapse", () => {
 	// Reset mock function call history before each test

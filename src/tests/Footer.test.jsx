@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { test, expect, describe } from "@jest/globals";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
-import Footer from "../Footer.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 
 // Helper function to render the Footer with router context
 // Since Footer might contain links that use React Router

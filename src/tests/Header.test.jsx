@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { test, expect } from "@jest/globals";
 import { userEvent } from "@testing-library/user-event";
 import { Routes, Route, MemoryRouter } from "react-router-dom";
-import Header from "../Header.jsx";
+import Header from "../components/Header/Header.jsx";
 
 // Wraps the component in a MemoryRouter with a specified initial route
 const renderWithRouter = (ui, { route = "/" } = {}) => {
