@@ -24,7 +24,8 @@ export default function AboutPage() {
 			<main>
 				<section id='about-container'>
 					<Banner
-						image='./about-banner.png'
+						image='./about-banner.webp'
+						alt="About page banner, mountains landscape"
 						className='margin'
 					/>
 					<CollapseList

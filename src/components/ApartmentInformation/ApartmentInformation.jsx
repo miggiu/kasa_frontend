@@ -29,8 +29,8 @@ function ApartmentInformation({ propertyData }) {
 					<p className='host-name'>{propertyData.host.name}</p>
 					<img
 						className='host-picture'
-						src={propertyData.host.picture}
-						alt={`Photo de ${propertyData.host.name}`}
+						src={propertyData.host.picture || null}
+						alt={`Photo de ${propertyData.host.name || 'hôte'}`}
 					/>
 				</div>
 			</div>
@@ -64,8 +64,8 @@ function ApartmentInformation({ propertyData }) {
 						<p className='host-name'>{propertyData.host.name}</p>
 						<img
 							className='host-picture'
-							src={propertyData.host.picture}
-							alt={`Photo de ${propertyData.host.name}`}
+							src={propertyData.host.picture || null}
+							alt={`Photo de ${propertyData.host.name || 'hôte'}`}
 						/>
 					</div>
 				</div>

@@ -38,11 +38,11 @@ function Card({ propertiesData }) {
 	return (
 		<div id='card-container'>
 			{propertiesData && propertiesData.length > 0 ? (
-				propertiesData.map((property) => (
+				propertiesData.map((property, index) => (
 					<div
 						className='card'
 						id={"apartment-" + property.id}
-						key={property.id}
+						key={property.id || `fallback-key-${index}`}
 						onClick={handleClick}
 					>
 						<img
@@ -52,7 +52,6 @@ function Card({ propertiesData }) {
 						/>
 						<h2
 							className='card-title'
-							key={property.id}
 						>
 							{property.title}
 						</h2>

@@ -9,7 +9,7 @@ describe("inserts banner props ", () => {
 		render(
 			<Banner
 				title='Chez vous, partout et ailleurs'
-				image='public\about-banner.png'
+				image='public\about-banner.webp'
 				id='banner-test'
 			/>
 		);
@@ -27,7 +27,7 @@ describe("renders Banner without title", () => {
 	const renderBanner = () =>
 		render(
 			<Banner
-				image='public\about-banner.png'
+				image='public\about-banner.wepb'
 				id='banner-test'
 			/>
 		);

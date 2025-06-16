@@ -83,6 +83,17 @@ npm run test:coverage
 ```
 You will find the HTML report under coverage\lcov-report\index.html, which you can then open in localhost, using LiveServer extension (ritwickdey.LiveServer) for exemple. 
 
+
+### Use Lighthouse
+To do a Lighthouse check without having to deploy the application on a hosting platform :
+
+```bash
+npm run preview
+```
+# Proceed to the Lighthouse tab in Chrome's developper's tools
+# Select and run Lighthouse audit of your choice
+
+
 ### Build for Production
 To create an optimized build for production, run:
 

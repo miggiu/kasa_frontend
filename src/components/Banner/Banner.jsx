@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
  * @param {string} className - Optional additional CSS classes
  */
 
-function Banner({title = "", image, id, className}) {
+function Banner({title = "", image, alt, className}) {
 
   
   /**
@@ -30,7 +30,7 @@ function Banner({title = "", image, id, className}) {
 
   return (
     <section id="title-card" className={className}>
-      <img src={image} alt={id} id="banner-img" /> 
+      <img src={image} alt={alt} id="banner-img" /> 
       {showTitle()}
     </section>
   );

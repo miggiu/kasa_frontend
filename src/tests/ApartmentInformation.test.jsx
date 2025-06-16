@@ -43,19 +43,15 @@ const TestWrapper = ({ propertyData }) => (
 			/>
 			<CollapseItem
 				title='Équipements'
-				content={
-					<ul>
-						{propertyData.equipments.map((item, index) => (
-							<li key={index}>{item}</li>
-						))}
-					</ul>
-				}
+				isArray={true}
+				content={propertyData.equipments || []} 
 			/>
 		</Collapse>
 	</>
 );
 
 describe("ApartmentInformation", () => {
+
 	//Verifies the component displays the appartment title
 	test("renders apartment title correctly", () => {
 		render(<ApartmentInformation propertyData={mockApartment} />);

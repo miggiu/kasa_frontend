@@ -30,7 +30,6 @@ function HomePage() {
 			.then((response) => response.json())
 			.then((data) => {
 				setPropertiesData(data);
-				console.log(data);
 			})
 			.catch((error) => console.log(error));
 	}, []);
@@ -44,7 +43,8 @@ function HomePage() {
 			<main>
 				<Banner
 					className='margin'
-					image='./title-card-background.jpg'
+					image='./title-card-background.webp'
+					alt="Homepage banner, sea and rocks lanscape"
 					title={
 						<>
 							Chez vous,<span className='comma'> partout et ailleurs</span>
