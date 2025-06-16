@@ -89,10 +89,10 @@ To do a Lighthouse check without having to deploy the application on a hosting p
 
 ```bash
 npm run preview
-```
+
 # Proceed to the Lighthouse tab in Chrome's developper's tools
 # Select and run Lighthouse audit of your choice
-
+```
 
 ### Build for Production
 To create an optimized build for production, run:
@@ -120,6 +120,6 @@ Here is a list of usable Routes:
 ---
 
 ## Acknowledgments
-- Thanks to the creators of React, React Router, Vite, Jest and Docker.
+- Thanks to the creators of React, React Router, Vite, Lighthouse, Jest and Docker.
 - Special thanks to https://github.com/Ileriayo/markdown-badges for the badges used in this README.md file & ritwickdey.LiveServer extension mentionned above. 
 
